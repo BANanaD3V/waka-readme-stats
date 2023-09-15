@@ -86,6 +86,7 @@ async def update_data_with_commit_stats(repo_details: Dict, yearly_data: Dict, d
                         yearly_data[curr_year][quarter][repo_details["primaryLanguage"]["name"]]["add"] += commit["additions"]
                         yearly_data[curr_year][quarter][repo_details["primaryLanguage"]["name"]]["del"] += commit["deletions"]
 
-            if not EM.DEBUG_RUN:
+            #if not EM.DEBUG_RUN:
+            if True:
                 await sleep(0.4)
         except: pass
